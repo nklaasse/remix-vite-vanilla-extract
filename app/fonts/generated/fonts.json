@@ -1,0 +1,44 @@
+{
+  "Latn": {
+    "file": "../src-next/fonts/generated/stylesheets/Latn.css",
+    "fonts": {
+      "heading": "\"CVMaker Heading Latn\"",
+      "body": "\"CVMaker Body Latn\""
+    }
+  },
+  "Cyrl": {
+    "file": "../src-next/fonts/generated/stylesheets/Cyrl.css",
+    "fonts": {
+      "heading": "\"CVMaker Heading Cyrl\"",
+      "body": "\"CVMaker Body Cyrl\""
+    }
+  },
+  "Grek": {
+    "file": "../src-next/fonts/generated/stylesheets/Grek.css",
+    "fonts": {
+      "heading": "\"CVMaker Heading Grek\"",
+      "body": "\"CVMaker Body Grek\""
+    }
+  },
+  "Arab": {
+    "file": "../src-next/fonts/generated/stylesheets/Arab.css",
+    "fonts": {
+      "heading": "\"CVMaker Heading Arab\"",
+      "body": "\"CVMaker Body Arab\""
+    }
+  },
+  "Kore": {
+    "file": "../src-next/fonts/generated/stylesheets/Kore.css",
+    "fonts": {
+      "heading": "\"CVMaker Heading Kore\"",
+      "body": "\"CVMaker Body Kore\""
+    }
+  },
+  "Jpan": {
+    "file": "../src-next/fonts/generated/stylesheets/Jpan.css",
+    "fonts": {
+      "heading": "\"CVMaker Heading Jpan\"",
+      "body": "\"CVMaker Body Jpan\""
+    }
+  }
+}
