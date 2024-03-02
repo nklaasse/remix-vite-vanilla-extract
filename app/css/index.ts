@@ -1,8 +1,8 @@
 // Importing reset CSS
 import "./_reset.css";
 
-export * as utils from "./utils/index.css";
-export * as mixins from "./mixins/index.css";
+export * as utils from "./utils";
+export * as mixins from "./mixins";
 export * as colors from "./colors.css";
 
 export { theme } from "./theme.css";
