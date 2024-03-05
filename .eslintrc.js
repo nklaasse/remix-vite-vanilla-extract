@@ -21,7 +21,15 @@ module.exports = {
   },
 
   // Base config
-  extends: ["eslint:recommended", "plugin:storybook/recommended"],
+  extends: [
+    "eslint:recommended",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended"
+  ],
+
+  rules: {
+    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+  },
 
   overrides: [
     // React

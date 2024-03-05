@@ -1,3 +1,4 @@
+import * as React from "react";
 import type { BaseProps } from "./_Base";
 import { Base } from "./_Base";
 

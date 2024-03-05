@@ -8,9 +8,25 @@ import {
   Button as ReactAriaButton,
   Link as ReactAriaLink,
 } from "react-aria-components";
+import type { AvatarProps } from "../Avatar";
 import { button } from "./Button.css";
+import { ButtonAvatar } from "./ButtonAvatar";
 import { ButtonIcon } from "./ButtonIcon";
 import { ButtonLabel } from "./ButtonLabel";
+
+type ButtonContextValue = {
+  props: {
+    avatarProps: Pick<AvatarProps, "size">;
+  };
+};
+
+export const ButtonContext = React.createContext<ButtonContextValue>({
+  props: {
+    avatarProps: {
+      size: "default",
+    },
+  },
+});
 
 export type ButtonSize = "compact" | "default" | "intro";
 
@@ -101,5 +117,6 @@ const _Button = React.forwardRef<
 
 export const Button = Object.assign({}, _Button, {
   Icon: ButtonIcon,
+  Avatar: ButtonAvatar,
   Label: ButtonLabel,
 });

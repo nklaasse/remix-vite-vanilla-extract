@@ -1,4 +1,4 @@
-import { theme } from "~/css/theme.css";
+import { theme } from "~/css";
 import { assignVars, styleVariants } from "@vanilla-extract/css";
 import info from "./generated/fonts.json";
 

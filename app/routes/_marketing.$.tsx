@@ -4,9 +4,8 @@ import type {
   LoaderFunction,
   MetaFunction,
 } from "@remix-run/cloudflare";
-import { FlagAR } from "~/icons/FlagAR";
-import { FlagNL } from "~/icons/FlagNL";
 import { Button } from "~/components/Button/Button";
+import { Badge } from "~/components/Badge";
 
 export const loader = async function loader() {
   return json({});
@@ -24,11 +23,9 @@ export default function Index() {
   return (
     <fieldset>
       <legend>_marketing.$</legend>
-      Nice Content
-      <FlagNL />
-      <FlagAR />
-      <Button>
-        <Button.Label>Click me</Button.Label>
+      <Badge>Default</Badge>
+      <Button variant="secondary">
+        <Button.Label>Primary</Button.Label>
       </Button>
     </fieldset>
   );

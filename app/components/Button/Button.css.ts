@@ -1,8 +1,4 @@
-import {
-  theme,
-  mixins,
-  // modes
-} from "~/css";
+import { mixins, modes, theme } from "~/css";
 import { style, styleVariants } from "@vanilla-extract/css";
 import { calc } from "@vanilla-extract/css-utils";
 
@@ -61,18 +57,18 @@ const buttonContainer = style({
   selectors: {
     [`&${buttonVariants.primary}`]: {
       ...mixins.accents.brand,
+
       backgroundColor: theme.colors.accent[9],
       color: theme.colors.accent[1],
     },
 
-    // [`${modes.modes.light} &${buttonVariants.primary}:not(${buttonIsDisabled})`]:
-    //   {
-    //     color: theme.colors.accent[1],
-    //   },
+    [`${modes.light} &${buttonVariants.primary}:not(${buttonIsDisabled})`]: {
+      color: theme.colors.accent[1],
+    },
 
-    // [`${modes.dark} &${buttonVariants.primary}:not(${buttonIsDisabled})`]: {
-    //   color: theme.colors.accent[12],
-    // },
+    [`${modes.dark} &${buttonVariants.primary}:not(${buttonIsDisabled})`]: {
+      color: theme.colors.accent[12],
+    },
 
     [`&${buttonVariants.primary}:is(${buttonIsHovered}, ${buttonIsFocused})`]: {
       backgroundColor: theme.colors.accent[10],
@@ -188,6 +184,8 @@ const buttonContainer = style({
 
 export const button = {
   container: buttonContainer,
+
   variants: _buttonVariants,
+
   states: buttonStates,
 };

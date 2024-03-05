@@ -1,31 +1,33 @@
 import { assignVars, styleVariants } from "@vanilla-extract/css";
-import { global } from "./_global.css";
+// Vanilla-extract plugin crashes when importing diffently
+import * as _global from "./_global.css";
 import * as colors from "./colors.css";
 
 export const modes = styleVariants({
   light: [
     {
       colorScheme: "light",
-      backgroundColor: global.colors.light.gray[1],
+      backgroundColor: colors.base.gray[1],
+      color: colors.base.gray[12],
       vars: assignVars(colors.base, {
-        brand: global.colors.light.brand,
-        error: global.colors.light.error,
-        success: global.colors.light.success,
-        selection: global.colors.light.selection,
-        gray: global.colors.light.gray,
-        overlay: global.colors.light.overlay,
-        accent: global.colors.light.gray,
+        brand: _global.global.colors.light.brand,
+        error: _global.global.colors.light.error,
+        success: _global.global.colors.light.success,
+        selection: _global.global.colors.light.selection,
+        gray: _global.global.colors.light.gray,
+        overlay: _global.global.colors.light.overlay,
+        accent: _global.global.colors.light.gray,
       }),
     },
     {
       vars: assignVars(colors.accents, {
-        neutral: global.colors.light.gray,
-        brand: global.colors.light.tomato,
-        selection: global.colors.light.indigo,
-        tomato: global.colors.light.tomato,
-        indigo: global.colors.light.indigo,
-        yellow: global.colors.light.yellow,
-        amber: global.colors.light.amber,
+        neutral: _global.global.colors.light.gray,
+        brand: _global.global.colors.light.tomato,
+        selection: _global.global.colors.light.indigo,
+        tomato: _global.global.colors.light.tomato,
+        indigo: _global.global.colors.light.indigo,
+        yellow: _global.global.colors.light.yellow,
+        amber: _global.global.colors.light.amber,
       }),
     },
   ],
@@ -35,24 +37,24 @@ export const modes = styleVariants({
       backgroundColor: colors.base.gray[1],
       color: colors.base.gray[12],
       vars: assignVars(colors.base, {
-        brand: global.colors.dark.brand,
-        error: global.colors.dark.error,
-        success: global.colors.dark.success,
-        selection: global.colors.dark.selection,
-        gray: global.colors.dark.gray,
-        overlay: global.colors.dark.overlay,
-        accent: global.colors.dark.gray,
+        brand: _global.global.colors.dark.brand,
+        error: _global.global.colors.dark.error,
+        success: _global.global.colors.dark.success,
+        selection: _global.global.colors.dark.selection,
+        gray: _global.global.colors.dark.gray,
+        overlay: _global.global.colors.dark.overlay,
+        accent: _global.global.colors.dark.gray,
       }),
     },
     {
       vars: assignVars(colors.accents, {
-        neutral: global.colors.dark.gray,
-        brand: global.colors.dark.tomato,
-        selection: global.colors.dark.indigo,
-        tomato: global.colors.dark.tomato,
-        indigo: global.colors.dark.indigo,
-        yellow: global.colors.dark.yellow,
-        amber: global.colors.dark.amber,
+        neutral: _global.global.colors.dark.gray,
+        brand: _global.global.colors.dark.tomato,
+        selection: _global.global.colors.dark.indigo,
+        tomato: _global.global.colors.dark.tomato,
+        indigo: _global.global.colors.dark.indigo,
+        yellow: _global.global.colors.dark.yellow,
+        amber: _global.global.colors.dark.amber,
       }),
     },
   ],

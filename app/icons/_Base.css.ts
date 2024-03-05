@@ -1,8 +1,8 @@
-import { theme } from "~/css/theme.css";
+import { theme } from "~/css";
 import { keyframes, style, styleVariants } from "@vanilla-extract/css";
 
 const rtlContainer = style({
-  selectors: {
+  "selectors": {
     '*[dir="ltr"] &': {
       display: "none",
     },
@@ -12,7 +12,7 @@ const rtlContainer = style({
 export const rtl = { container: rtlContainer };
 
 const ltrContainer = style({
-  selectors: {
+  "selectors": {
     '*[dir="rtl"] &': {
       display: "none",
     },

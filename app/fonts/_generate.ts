@@ -1,4 +1,4 @@
-import { theme } from "~/css/index.css";
+import { theme } from "~/css";
 import { globalFontFace, globalStyle } from "@vanilla-extract/css";
 import data from "./generated/data.json";
 
