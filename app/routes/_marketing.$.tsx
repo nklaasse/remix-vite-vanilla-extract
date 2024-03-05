@@ -6,7 +6,6 @@ import type {
 } from "@remix-run/cloudflare";
 import { Button } from "~/components/Button/Button";
 import { Badge } from "~/components/Badge";
-import { container } from "./_marketing.$.css";
 import { IconSearch } from "~/icons/IconSearch";
 
 export const loader = async function loader() {
@@ -23,7 +22,7 @@ export const meta = function meta() {
 
 export default function Index() {
   return (
-    <fieldset className={container}>
+    <fieldset>
       <legend>_marketing.$</legend>
       <Badge variant="info">Default</Badge>
       <Button variant="primary">
