@@ -1,8 +1,7 @@
 import { createThemeContract } from "@vanilla-extract/css";
-// Vanilla-extract plugin crashes when importing diffently
-import * as _global from "./_global.css";
+import { global } from "./_global.css";
 
-const color = createThemeContract(_global.global.colors.light.brand);
+const color = createThemeContract(global.colors.light.brand);
 
 export const accents = createThemeContract({
   neutral: color,

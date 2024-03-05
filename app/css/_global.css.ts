@@ -11,7 +11,7 @@ import {
   radii,
   relativeSizes,
   space,
-} from "./_tokens.css";
+} from "./_tokens";
 
 const toRem = (v: number) => `${v}rem`;
 const toEm = (v: number) => `${v}em`;

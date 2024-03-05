@@ -1,4 +1,5 @@
-import { parse as baseParse, type Submission } from "@conform-to/react";
+import { parse as baseParse } from "@conform-to/react";
+import type { Submission } from "@conform-to/react";
 import type { IntlShape } from "react-intl";
 import {
   createFieldError as createFieldErrorOriginal,

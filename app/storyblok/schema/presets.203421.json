@@ -1,0 +1,70 @@
+{
+  "presets": [
+    {
+      "id": 1985346,
+      "name": "Variant 1",
+      "preset": {
+        "_uid": "ade9b209-882e-49fd-859f-7530c18662c9",
+        "links": [
+          {
+            "to": {
+              "id": "79e5c0fb-6ac0-49a4-8de8-d1cf79691743",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "en-GB/blog/"
+            },
+            "_uid": "94f2f8c3-bb85-4044-a2aa-83e871650246",
+            "content": "All Articles",
+            "component": "link"
+          },
+          {
+            "to": {
+              "id": "f5abff08-e88b-48c4-8ea6-0252acf22de0",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "en-GB/blog/cv/"
+            },
+            "_uid": "d90b94c0-67d5-4d68-9f92-73e3dae972f5",
+            "content": "CV Writing",
+            "component": "link"
+          },
+          {
+            "to": {
+              "id": "02e9e8aa-7dac-4a23-acbc-9dc2ec86568d",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "en-GB/blog/job-interview/"
+            },
+            "_uid": "694d9464-5a9f-4915-8a5a-56cb658b1f04",
+            "content": "Job Interview",
+            "component": "link"
+          },
+          {
+            "to": {
+              "id": "62b9be84-02b9-4403-b722-6dba41b96b7e",
+              "url": "",
+              "linktype": "story",
+              "fieldtype": "multilink",
+              "cached_url": "en-GB/blog/cover-letter/"
+            },
+            "_uid": "1899f092-991a-48d1-9961-7acf80562c28",
+            "content": "Cover Letter",
+            "component": "link"
+          }
+        ],
+        "component": "subNavigation"
+      },
+      "component_id": 4979938,
+      "space_id": 203421,
+      "created_at": "2023-12-05T16:17:34.363Z",
+      "updated_at": "2023-12-05T16:17:34.363Z",
+      "image": "",
+      "color": "",
+      "icon": "",
+      "description": "All, CV writing, Job interview, cover letter"
+    }
+  ]
+}

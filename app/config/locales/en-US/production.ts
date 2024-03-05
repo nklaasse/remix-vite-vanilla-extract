@@ -1,3 +1,3 @@
 export const config = {
-  hostname: "hostname.com",
+  hostname: "cvmaker.com",
 } as const;

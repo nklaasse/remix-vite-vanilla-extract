@@ -1,5 +1,4 @@
 import "./_reset.css";
-
 export { breakpoints } from "./breakpoints.css";
 export * as mixins from "./mixins/index.css";
 export { modes } from "./modes.css";

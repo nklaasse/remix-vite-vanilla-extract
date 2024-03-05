@@ -1,3 +1,3 @@
-import { generate } from "./_generate";
+import * as fn from "./_generate.css";
 
-export const font = generate("Cyrl");
+export const font = fn.generate("Cyrl");

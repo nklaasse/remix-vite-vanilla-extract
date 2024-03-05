@@ -17,9 +17,7 @@ const badgeContainer = style({
 
   paddingBlock: theme.space[0.5],
   paddingInline: theme.space[1.5],
-
   borderRadius: theme.radii.circle,
-
   backgroundColor: theme.colors.accent[9],
   color: theme.colors.gray[1],
 
@@ -43,8 +41,7 @@ const badgeText = style({
 });
 
 export const badge = {
-  container: badgeContainer,
   text: badgeText,
-
   variants: badgeVariants,
+  container: badgeContainer,
 };

@@ -1,3 +1,3 @@
-import { generate } from "./_generate";
+import * as fn from "./_generate.css";
 
-export const font = generate("Latn");
+export const font = fn.generate("Latn");

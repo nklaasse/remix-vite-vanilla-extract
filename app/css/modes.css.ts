@@ -1,5 +1,4 @@
 import { assignVars, styleVariants } from "@vanilla-extract/css";
-// Vanilla-extract plugin crashes when importing diffently
 import * as _global from "./_global.css";
 import * as colors from "./colors.css";
 
@@ -7,7 +6,9 @@ export const modes = styleVariants({
   light: [
     {
       colorScheme: "light",
+
       backgroundColor: colors.base.gray[1],
+
       color: colors.base.gray[12],
       vars: assignVars(colors.base, {
         brand: _global.global.colors.light.brand,
@@ -34,15 +35,20 @@ export const modes = styleVariants({
   dark: [
     {
       colorScheme: "dark",
+
       backgroundColor: colors.base.gray[1],
+
       color: colors.base.gray[12],
+
       vars: assignVars(colors.base, {
         brand: _global.global.colors.dark.brand,
         error: _global.global.colors.dark.error,
         success: _global.global.colors.dark.success,
         selection: _global.global.colors.dark.selection,
+
         gray: _global.global.colors.dark.gray,
         overlay: _global.global.colors.dark.overlay,
+
         accent: _global.global.colors.dark.gray,
       }),
     },
@@ -51,6 +57,7 @@ export const modes = styleVariants({
         neutral: _global.global.colors.dark.gray,
         brand: _global.global.colors.dark.tomato,
         selection: _global.global.colors.dark.indigo,
+
         tomato: _global.global.colors.dark.tomato,
         indigo: _global.global.colors.dark.indigo,
         yellow: _global.global.colors.dark.yellow,

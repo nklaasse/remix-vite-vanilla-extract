@@ -6,8 +6,16 @@ import {
   ScrollRestoration,
   LiveReload,
 } from "@remix-run/react";
+import classNames from "classnames";
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/cloudflare";
+import "~/fonts/Arab.css";
+import "~/fonts/Latn.css";
+import "~/fonts/Cyrl.css";
+import "~/fonts/Grek.css";
+import "~/fonts/Jpan.css";
+import "~/fonts/Kore.css";
+import { modes } from "~/css";
 
 export const links: LinksFunction = () => {
   return [
@@ -24,11 +32,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className={classNames(modes.light)}>
         {children}
         <ScrollRestoration />
-        <LiveReload />
         <Scripts />
+        <LiveReload />
       </body>
     </html>
   );

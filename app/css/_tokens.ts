@@ -17,6 +17,7 @@ import {
   yellowDark,
 } from "@radix-ui/colors";
 
+// Colors
 export const colors = {
   dark: {
     gray: {
@@ -33,6 +34,7 @@ export const colors = {
       11: mauveDark.mauve11,
       12: mauveDark.mauve12,
     },
+
     overlay: {
       1: whiteA.whiteA1,
       2: whiteA.whiteA2,
@@ -47,6 +49,7 @@ export const colors = {
       11: whiteA.whiteA11,
       12: whiteA.whiteA12,
     },
+
     yellow: {
       1: yellowDark.yellow1,
       2: yellowDark.yellow2,
@@ -61,6 +64,7 @@ export const colors = {
       11: yellowDark.yellow11,
       12: yellowDark.yellow12,
     },
+
     amber: {
       1: amberDark.amber1,
       2: amberDark.amber2,
@@ -75,6 +79,7 @@ export const colors = {
       11: amberDark.amber11,
       12: amberDark.amber12,
     },
+
     indigo: {
       1: indigoDark.indigo1,
       2: indigoDark.indigo2,
@@ -89,6 +94,7 @@ export const colors = {
       11: indigoDark.indigo11,
       12: indigoDark.indigo12,
     },
+
     tomato: {
       1: tomatoDark.tomato1,
       2: tomatoDark.tomato2,
@@ -103,6 +109,7 @@ export const colors = {
       11: tomatoDark.tomato11,
       12: tomatoDark.tomato12,
     },
+
     red: {
       1: redDark.red1,
       2: redDark.red2,
@@ -117,6 +124,7 @@ export const colors = {
       11: redDark.red11,
       12: redDark.red12,
     },
+
     grass: {
       1: grassDark.grass1,
       2: grassDark.grass2,
@@ -147,6 +155,7 @@ export const colors = {
       11: mauve.mauve11,
       12: mauve.mauve12,
     },
+
     overlay: {
       1: blackA.blackA1,
       2: blackA.blackA2,
@@ -161,6 +170,7 @@ export const colors = {
       11: blackA.blackA11,
       12: blackA.blackA12,
     },
+
     yellow: {
       1: yellow.yellow1,
       2: yellow.yellow2,
@@ -175,6 +185,7 @@ export const colors = {
       11: yellow.yellow11,
       12: yellow.yellow12,
     },
+
     amber: {
       1: amber.amber1,
       2: amber.amber2,
@@ -189,6 +200,7 @@ export const colors = {
       11: amber.amber11,
       12: amber.amber12,
     },
+
     indigo: {
       1: indigo.indigo1,
       2: indigo.indigo2,
@@ -203,6 +215,7 @@ export const colors = {
       11: indigo.indigo11,
       12: indigo.indigo12,
     },
+
     tomato: {
       1: tomato.tomato1,
       2: tomato.tomato2,
@@ -217,6 +230,7 @@ export const colors = {
       11: tomato.tomato11,
       12: tomato.tomato12,
     },
+
     red: {
       1: red.red1,
       2: red.red2,
@@ -231,6 +245,7 @@ export const colors = {
       11: red.red11,
       12: red.red12,
     },
+
     grass: {
       1: grass.grass1,
       2: grass.grass2,
@@ -248,11 +263,16 @@ export const colors = {
   },
 } as const;
 
+// Base unit in spacing system
+// can be multiplied by 0.5 or a int
 const gridSize = 8;
 const gridIncrement = 0.5;
 
+// Default font size (1rem)
 const baseFontSize = 16;
+// Approximate distance between lines
 const baseMultiplier = 1.3;
+// Line height of the baseline grid
 const baselineHeight = gridSize * gridIncrement;
 
 export const fonts = {
@@ -275,9 +295,9 @@ export const fontSizes = {
   small: 0.625,
 } as const;
 
-const calculateLineHeight = (size: number, ratio: number, grid: number) => {
-  return Math.ceil((size * ratio) / grid) * grid;
-};
+// Calculate the exact number (px) which fit's on the baseline grid
+const calculateLineHeight = (size: number, ratio: number, grid: number) =>
+  Math.ceil((size * ratio) / grid) * grid;
 
 const getLineHeight = (name: keyof typeof fontSizes) => {
   const size = fontSizes[name] * baseFontSize;
@@ -292,6 +312,7 @@ export const lineHeights = {
   "heading-4": getLineHeight("heading-4"),
   "heading-5": getLineHeight("heading-5"),
   "heading-6": getLineHeight("heading-6"),
+
   intro: getLineHeight("intro"),
   text: getLineHeight("text"),
   compact: getLineHeight("compact"),
@@ -308,6 +329,7 @@ export const letterSpacings = {
   "heading-6": -0.0025,
 } as const;
 
+// Alias font weights
 export const fontWeights = {
   regular: 400,
   medium: 500,
@@ -344,12 +366,15 @@ export const absoluteSizes = {
   cardLarge: 460,
   contentContainer: 1160,
   drawer: 440,
+
   icon: 20,
+
   ...space,
 };
 
 export const relativeSizes = {
   full: 1,
+
   "1/2": 1 / 2,
   "1/3": 1 / 3,
   "2/3": 2 / 3,
