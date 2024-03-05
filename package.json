@@ -14,8 +14,7 @@
     "typecheck": "tsc",
     "typegen": "wrangler types",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "prepare": "husky"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.9",
