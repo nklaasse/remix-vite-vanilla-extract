@@ -1,7 +1,11 @@
 import { AtRule, Comment, Declaration, parse, Rule, stringify } from "css";
-import * as fs from "fs/promises";
+import { fileURLToPath } from "url";
 import fetch from "node-fetch";
+import * as fs from "fs/promises";
 import * as path from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * Script which helps us to fetch fonts from Google fonts using the CSS API.
@@ -106,6 +110,8 @@ const scripts = {
 } satisfies Record<Scripts, Script>;
 
 type Weights = 900 | 800 | 700 | 600 | 500 | 400 | 300 | 200 | 100;
+
+console.log("generate");
 
 const fontWeights = {
   // Extra bold, Bold, Semi bold, Medium
@@ -295,10 +301,12 @@ async function fetchFontFile(url: string) {
   const response = await fetch(url);
 
   if (response.ok) {
-    const buffer = await response.buffer();
+    const arrayBuffer = await response.arrayBuffer();
+
+    const buffer = Buffer.from(arrayBuffer);
 
     await fs.writeFile(
-      path.join(__dirname, "../src-next/fonts/generated/files", fileName),
+      path.join(__dirname, "../app/fonts/generated/files", fileName),
       buffer
     );
 
