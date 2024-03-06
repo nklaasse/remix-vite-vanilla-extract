@@ -16,7 +16,7 @@ import type {
   FooterStoryblok,
   HeaderStoryblok,
   OverviewStoryblok,
-} from "~/storyblok/types/component-types-sb";
+} from "~/storyblok/component-types-sb";
 
 import {
   Component as HeaderContentTypeComponent,
@@ -96,17 +96,18 @@ export const loader = async function loader(args) {
   const slug = params["*"] ?? "";
 
   const storyblokClient = new StoryblokClient({
-    accessToken: context.STORYBLOK_SECRET as string,
+    accessToken: env.STORYBLOK_SECRET as string,
   });
 
   // Get config by hostname
   const { hostname } = new URL(request.url);
   const locale = getLocale(hostname, context);
 
+  const isProduction = env.CVMAKER_ENVIRONMENT === "production";
+
   // Determine if we are in a staging environment or in production so we either show the
   // work in progress or the final pages
-  const version =
-    env.CVMAKER_ENVIRONMENT === "production" ? "published" : "draft";
+  const version = isProduction ? "published" : "draft";
 
   // Define the relations that we want to resolve for the main story
   const mainStoryRelations = ["blogPost.author", "blogPost.subject"];

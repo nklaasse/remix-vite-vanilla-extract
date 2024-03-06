@@ -12,8 +12,12 @@ import { Button } from "~/components/Button";
 import { IconMenu } from "~/icons/IconMenu";
 import { stripLocaleFromUrl } from "~/utils";
 import type { StoryblokStory } from "storyblok-generate-ts";
+import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
 
-export const loader = async (story: StoryblokStory<HeaderStoryblok>) => {
+export const loader = async (
+  story: StoryblokStory<HeaderStoryblok>,
+  _args: LoaderFunctionArgs
+) => {
   return {
     component: story.content.component,
     props: {
