@@ -1,7 +1,6 @@
 import { Link } from "~/components/Link";
 import { IconArrowInlineEnd } from "~/icons/IconArrowInlineEnd";
 import type { Meta, StoryFn } from "@storybook/react";
-import * as React from "react";
 
 export default {
   title: "Components/Link",

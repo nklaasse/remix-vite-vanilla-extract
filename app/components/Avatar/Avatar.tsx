@@ -1,5 +1,4 @@
 import classnames from "classnames";
-import React from "react";
 import { avatar } from "./Avatar.css";
 
 export type AvatarProps = {

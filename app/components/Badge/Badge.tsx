@@ -1,6 +1,6 @@
 import classnames from "classnames";
 import * as React from "react";
-import * as styles from "./Badge.css";
+import { badge } from "./Badge.css";
 
 export type BadgeProps = {
   /**
@@ -13,7 +13,7 @@ export type BadgeProps = {
    *
    * @default 'brand'
    */
-  variant?: keyof typeof styles.badge.variants.variant;
+  variant?: keyof typeof badge.variants.variant;
 };
 
 /**
@@ -24,12 +24,9 @@ export function Badge(props: BadgeProps) {
 
   return (
     <div
-      className={classnames(
-        styles.badge.container,
-        styles.badge.variants.variant[variant]
-      )}
+      className={classnames(badge.container, badge.variants.variant[variant])}
     >
-      <span className={styles.badge.text}>{children}</span>
+      <span className={badge.text}>{children}</span>
     </div>
   );
 }
