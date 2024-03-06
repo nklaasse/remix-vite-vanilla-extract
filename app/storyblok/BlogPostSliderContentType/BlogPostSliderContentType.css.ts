@@ -324,8 +324,10 @@ const sliderNavigation = style({
 const sliderPills = style({
   display: "flex",
 
-  [breakpoints["small"]]: {
-    display: "flex",
+  "@media": {
+    [breakpoints["small"]]: {
+      display: "flex",
+    },
   },
 });
 

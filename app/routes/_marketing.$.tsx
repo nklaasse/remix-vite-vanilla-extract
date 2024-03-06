@@ -50,15 +50,12 @@ import {
   Component as BlogPostContentTypeComponent,
   loader as blogPostContentTypeLoader,
 } from "~/storyblok/BlogPostContentType";
-
 import { action as contactEmailFormContentTypeAction } from "~/storyblok/ContactEmailFormContentType";
-
 import type { StoryblokStory } from "storyblok-generate-ts";
-
 import type { ISbStoryData } from "storyblok-js-client";
 import StoryblokClient from "storyblok-js-client";
 import { resolveSBRelations } from "~/utils/resolveSBRelations";
-import { stripLocaleFromUrl } from "~/utils";
+import { stripLocaleFromUrl } from "~/utils/stripLocaleFromUrl";
 
 // Define the possible types of the main story
 export type MainStory =
@@ -96,7 +93,7 @@ export const loader = async function loader(args) {
   const slug = params["*"] ?? "";
 
   const storyblokClient = new StoryblokClient({
-    accessToken: env.STORYBLOK_SECRET as string,
+    accessToken: env.STORYBLOK_SECRET,
   });
 
   // Get config by hostname

@@ -24,15 +24,24 @@ export const getLocale = (
   throw new Error(`Locale for hostname ${hostname} not found`);
 };
 
+function getEnvironment(env: AppLoadContext["cloudflare"]["env"]) {
+  if (env.CVMAKER_ENVIRONMENT === "development") {
+    return "staging";
+  }
+
+  return env.CVMAKER_ENVIRONMENT;
+}
+
 export const getConfig = (locale: Locales, context: AppLoadContext) => {
   const { env } = context.cloudflare;
+  const environment = getEnvironment(env);
   const commonConfig = {
     gtmId: env.GTM_ID,
     apiUrl: env.CVMAKER_API_URL,
     environment: env.CVMAKER_ENVIRONMENT,
   } as const;
 
-  const { base: localeConfig, [env.CVMAKER_ENVIRONMENT]: environmentConfig } =
+  const { base: localeConfig, [environment]: environmentConfig } =
     locales[locale];
 
   return {

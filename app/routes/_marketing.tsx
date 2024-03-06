@@ -2,13 +2,10 @@ import type { MetaFunction } from "@remix-run/react";
 import { isRouteErrorResponse, useRouteError } from "@remix-run/react";
 import type { IntlShape } from "react-intl";
 import { useIntl } from "react-intl";
-
 import { Button } from "~/components/Button";
-
 import { errorPage } from "./_marketing.css";
-
-import cvMakerLogo from "public/images/CVMakerLogo.svg";
-import DummyYourNextCV from "public/images/DummyYourNextCV.svg";
+import cvMakerLogo from "~/images/CVMakerLogo.svg";
+import DummyYourNextCV from "~/images/DummyYourNextCV.svg";
 
 export const meta: MetaFunction = () => {
   return [{ title: "Oops!" }];

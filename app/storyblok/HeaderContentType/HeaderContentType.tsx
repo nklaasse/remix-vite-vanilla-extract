@@ -7,7 +7,7 @@ import {
   ctaGroup,
   mobileMenu,
 } from "./HeaderContentTypeBlock.css";
-import cvMakerLogo from "public/images/CVMakerLogo.svg";
+import cvMakerLogo from "~/images/CVMakerLogo.svg";
 import { Button } from "~/components/Button";
 import { IconMenu } from "~/icons/IconMenu";
 import { stripLocaleFromUrl } from "~/utils";

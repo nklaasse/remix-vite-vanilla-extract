@@ -13,7 +13,7 @@ import { Link as RouterLink } from "@remix-run/react";
 
 import { getLocale, locales } from "~/config";
 
-import cvMakerLogo from "public/images/CVMakerLogo.svg";
+import cvMakerLogo from "~/images/CVMakerLogo.svg";
 
 import type { IconProps } from "~/icons";
 
@@ -214,7 +214,6 @@ function FooterTop(props: FooterTopProps) {
               <ul className={footerTop.columnList}>
                 {/* link list in columns */}
                 {links.map((link) => {
-                  console.log("link.to", link.to);
                   return (
                     <li key={link.id} className={footerTop.columnListItem}>
                       <RouterLink

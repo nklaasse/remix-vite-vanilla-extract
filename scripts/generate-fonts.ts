@@ -111,8 +111,6 @@ const scripts = {
 
 type Weights = 900 | 800 | 700 | 600 | 500 | 400 | 300 | 200 | 100;
 
-console.log("generate");
-
 const fontWeights = {
   // Extra bold, Bold, Semi bold, Medium
   heading: [500, 600, 700, 800],
