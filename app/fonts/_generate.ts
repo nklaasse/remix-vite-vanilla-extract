@@ -11,7 +11,7 @@ export function generate(script: Script) {
     const fontFace = data.fontFaces[String(id) as keyof typeof data.fontFaces];
 
     globalFontFace(fontFace["font-family"], {
-      src: `url("app/fonts/generated/files/${fontFace.src}") format("woff2")`,
+      src: `url("fonts/generated/files/${fontFace.src}") format("woff2")`,
       fontStyle: fontFace["font-style"],
       fontWeight: fontFace["font-weight"],
       fontDisplay: "swap",
@@ -23,7 +23,7 @@ export function generate(script: Script) {
     const fontFace = data.fontFaces[String(id) as keyof typeof data.fontFaces];
 
     globalFontFace(fontFace["font-family"], {
-      src: `url("app/fonts/generated/files/${fontFace.src}") format("woff2")`,
+      src: `url("fonts/generated/files/${fontFace.src}") format("woff2")`,
       fontStyle: fontFace["font-style"],
       fontWeight: fontFace["font-weight"],
       fontDisplay: "swap",
