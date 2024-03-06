@@ -8,6 +8,7 @@ export const getLocale = (
   hostname: string,
   context: AppLoadContext
 ): Locales => {
+  const { env } = context.cloudflare;
   for (const locale of Object.keys(locales) as Array<Locales>) {
     const config = getConfig(locale, context);
 
@@ -16,22 +17,22 @@ export const getLocale = (
     }
   }
 
-  if (context.CVMAKER_LOCALE) {
-    return context.CVMAKER_LOCALE as Locales;
+  if (env.CVMAKER_LOCALE) {
+    return env.CVMAKER_LOCALE as Locales;
   }
 
   throw new Error(`Locale for hostname ${hostname} not found`);
 };
 
 export const getConfig = (locale: Locales, context: AppLoadContext) => {
-  const environment = context.CVMAKER_ENVIRONMENT as "production" | "staging";
+  const { env } = context.cloudflare;
   const commonConfig = {
-    gtmId: context.GTM_ID,
-    apiUrl: context.CVMAKER_API_URL,
-    environment,
+    gtmId: env.GTM_ID,
+    apiUrl: env.CVMAKER_API_URL,
+    environment: env.CVMAKER_ENVIRONMENT,
   } as const;
 
-  const { base: localeConfig, [environment]: environmentConfig } =
+  const { base: localeConfig, [env.CVMAKER_ENVIRONMENT]: environmentConfig } =
     locales[locale];
 
   return {
