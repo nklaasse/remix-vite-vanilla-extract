@@ -8,8 +8,9 @@ import type {
   MenuProps as ReactAriaMenuProps,
   PopoverProps as ReactAriaPopoverProps,
 } from "react-aria-components";
-import { Menu as ReactAriaMenu, useContextProps } from "react-aria-components";
 import {
+  Menu as ReactAriaMenu,
+  useContextProps,
   Collection as ReactAriaCollection,
   PopoverContext as ReactAriaPopoverContext,
 } from "react-aria-components";

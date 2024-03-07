@@ -1,4 +1,3 @@
-import * as React from "react";
 import type { ListBoxDescriptionProps } from "../ListBox";
 import { ListBox } from "../ListBox";
 

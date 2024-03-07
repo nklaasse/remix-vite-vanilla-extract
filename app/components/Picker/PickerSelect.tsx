@@ -8,12 +8,10 @@ import { useResizeObserver } from "~/hooks/useResizeObserver";
 import { IconChevronBlockEnd } from "~/icons/IconChevronBlockEnd";
 import * as React from "react";
 import type { AriaSelectProps } from "react-aria";
-import { FocusScope } from "react-aria";
-import { useButton } from "react-aria";
+import { FocusScope, useButton } from "react-aria";
 import { Tray } from "../Tray";
 import type { PickerContextValue } from "./Picker";
-import { ElementTypeProvider } from "./Picker";
-import { PickerContext } from "./Picker";
+import { PickerContext, ElementTypeProvider } from "./Picker";
 import { pickerSelect } from "./PickerSelect.css";
 
 export type PickerSelectProps<T extends Record<string, unknown>> = Pick<

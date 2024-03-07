@@ -11,7 +11,7 @@ export type MenuButtonProps = Omit<ButtonProps, "color" | "variant" | "size">;
  */
 export const MenuButton = React.forwardRef(function MenuButton(
   props: MenuButtonProps,
-  ref: React.ForwardedRef<HTMLButtonElement>
+  _ref: React.ForwardedRef<HTMLButtonElement>
 ) {
   const { children } = props;
 

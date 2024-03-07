@@ -11,12 +11,12 @@ type ValidateStructure<T, Struct> =
 
 interface RichTextDocNode {
   type: "doc";
-  attrs: {};
+  attrs: object;
 }
 
 interface RichTextTextNode {
   type: "text";
-  attrs: {};
+  attrs: object;
 }
 
 interface RichTextHeadingNode {
@@ -26,7 +26,7 @@ interface RichTextHeadingNode {
 
 interface RichTextParagraphNode {
   type: "paragraph";
-  attrs: {};
+  attrs: object;
 }
 
 interface RichTextLinkNode {
@@ -36,32 +36,32 @@ interface RichTextLinkNode {
 
 interface RichTextBoldNode {
   type: "bold";
-  attrs: {};
+  attrs: object;
 }
 
 interface RichTextBlokNode {
   type: "blok";
-  attrs: {};
+  attrs: object;
 }
 
 interface RichTextItalicNode {
   type: "italic";
-  attrs: {};
+  attrs: object;
 }
 
 interface RichTextBulletListNode {
   type: "bullet_list";
-  attrs: {};
+  attrs: object;
 }
 
 interface RichTextListItemNode {
   type: "list_item";
-  attrs: {};
+  attrs: object;
 }
 
 interface RichTextOrderedListNode {
   type: "ordered_list";
-  attrs: {};
+  attrs: object;
 }
 
 interface RichTextImageNode {
@@ -73,7 +73,7 @@ interface RichTextImageNode {
     title: string;
     source: string;
     copyright: string;
-    meta_data: {};
+    meta_data: object;
   };
 }
 
@@ -154,7 +154,7 @@ export async function modify<
 
     return {
       type: node.type,
-      // @ts-expect-error
+      // @ts-expect-error: We know that the type is in the handlers
       props: await handlers[node.type](node.attrs, content),
       content,
       marks,
@@ -195,14 +195,14 @@ export function generate<R, I extends Result = Result>(
     children = input.content.map((n, i) => generate(n as I, transformers, i));
   }
 
-  // @ts-expect-error
+  // @ts-expect-error: We know that the type is in the transformers
   let node = transformers[input.type](children, input.props, index);
 
   // Marks should be wrapped around the current node;
   // Things like Bold, Link or Italic would be in it.
   if (input.marks) {
     for (const mark of input.marks ?? []) {
-      // @ts-expect-error
+      // @ts-expect-error: We know that the type is in the transformers
       node = transformers[mark.type]([node], mark.props, index);
     }
   }

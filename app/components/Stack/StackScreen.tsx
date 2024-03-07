@@ -1,4 +1,3 @@
-import * as React from "react";
 import type { StackBaseProps } from "./_StackBase";
 import { StackBase } from "./_StackBase";
 import { StackBaseOverlay } from "./_StackBaseOverlay";

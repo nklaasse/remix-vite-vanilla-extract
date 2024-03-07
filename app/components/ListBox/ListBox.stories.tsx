@@ -12,7 +12,6 @@ import { FlagPE } from "~/icons/FlagPE";
 import { FlagUK } from "~/icons/FlagUK";
 import { FlagUS } from "~/icons/FlagUS";
 import type { Meta, StoryFn } from "@storybook/react";
-import * as React from "react";
 import { useListState } from "react-stately";
 
 export default {

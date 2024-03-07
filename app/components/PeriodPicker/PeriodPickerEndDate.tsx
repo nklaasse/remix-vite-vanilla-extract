@@ -2,8 +2,10 @@ import * as React from "react";
 import { mergeProps } from "react-aria";
 import { TextField } from "../TextField";
 import type { PeriodPickerDateBaseProps } from "./_PeriodPickerDateBase";
-import { ElementTypeProvider } from "./_PeriodPickerDateBase";
-import { PeriodPickerDateBase } from "./_PeriodPickerDateBase";
+import {
+  ElementTypeProvider,
+  PeriodPickerDateBase,
+} from "./_PeriodPickerDateBase";
 import { PeriodPickerContext } from "./PeriodPickerContext";
 import { periodPickerEndDate } from "./PeriodPickerEndDate.css";
 

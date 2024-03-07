@@ -1,6 +1,5 @@
-import { mixins, theme } from "~/css";
+import { mixins, breakpoints, theme } from "~/css";
 import { style } from "@vanilla-extract/css";
-import { breakpoints } from "~/css";
 import { absoluteSizes } from "~/css/_tokens";
 import { calc } from "@vanilla-extract/css-utils";
 

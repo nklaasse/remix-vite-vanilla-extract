@@ -15,7 +15,7 @@ export type CheckboxProps = Omit<
 };
 
 const _Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
-  function Checkbox(props, ref) {
+  function Checkbox(props, _ref) {
     const { slot } = React.useContext(CheckboxContext);
 
     const { children, ...otherProps } = props;

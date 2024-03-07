@@ -1,7 +1,6 @@
 import { Form } from "~/components/Form";
 import { TextField } from "~/components/TextField";
 import type { Meta, StoryFn } from "@storybook/react";
-import * as React from "react";
 
 export default {
   title: "Components/Form",

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { templateSelectPreview } from "./TemplateSelectPreview.css";
 
 export type TemplateSelectPreviewProps = {

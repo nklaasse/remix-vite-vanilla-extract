@@ -10,10 +10,14 @@ import { useResizeObserver } from "~/hooks/useResizeObserver";
 import { IconChevronBlockEnd } from "~/icons/IconChevronBlockEnd";
 import * as React from "react";
 import type { AriaComboBoxProps } from "react-aria";
-import { useDialog, useId } from "react-aria";
-import { useOverlayTrigger } from "react-aria";
-import { mergeProps, useButton } from "react-aria";
-import { FocusScope } from "react-aria";
+import {
+  FocusScope,
+  useDialog,
+  useId,
+  useOverlayTrigger,
+  mergeProps,
+  useButton,
+} from "react-aria";
 import type { ComboboxContextValue } from "./ComboBox";
 import {
   ComboBoxContext,

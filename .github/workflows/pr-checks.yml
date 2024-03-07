@@ -1,0 +1,23 @@
+name: Site Next
+on:
+  pull_request:
+    branches: [master]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies
+        run: npm ci
+      - name: Code Linting
+        run: npm run lint
+      - name: Run Type Check
+        run: npm run typecheck
+      - name: Run Unit tests
+        run: npm run coverage
+      - run: echo "🍏 This job's status is ${{ job.status }}."

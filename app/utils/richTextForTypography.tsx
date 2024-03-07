@@ -65,8 +65,8 @@ export async function modifyForTypography(richText: RichTextType) {
     bold: async () => ({}),
     italic: async () => ({}),
     link: async (attrs) => {
-      let isInternal = attrs.href.substring(0, 1) === "/";
-      let href = isInternal
+      const isInternal = attrs.href.substring(0, 1) === "/";
+      const href = isInternal
         ? `/${stripLocaleFromUrl(attrs.href.slice(1)).url}`
         : attrs.href;
 

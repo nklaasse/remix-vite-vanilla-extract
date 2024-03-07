@@ -1,6 +1,5 @@
 import { Disclosure } from "~/components/Disclosure";
 import type { Meta, StoryFn } from "@storybook/react";
-import * as React from "react";
 
 export default {
   title: "Components/Disclosure",

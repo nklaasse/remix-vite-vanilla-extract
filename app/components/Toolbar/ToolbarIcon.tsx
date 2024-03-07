@@ -2,7 +2,6 @@ import type { ActionGroupIconProps } from "~/components/ActionGroup";
 import { ActionGroup } from "~/components/ActionGroup";
 import type { ButtonIconProps } from "~/components/Button";
 import { Button } from "~/components/Button";
-import * as React from "react";
 import { useElementType } from "./Toolbar";
 
 export type ToolbarButtonIconProps = ButtonIconProps;

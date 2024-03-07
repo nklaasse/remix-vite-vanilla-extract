@@ -431,7 +431,6 @@ async function generateCSSFiles(output: Output) {
     const heading = `"CVMaker Heading ${script}"`;
     const body = `"CVMaker Body ${script}"`;
 
-    // @ts-expect-error
     for (const fontFace of output.scripts[script].heading.fontFaces) {
       rules.push({
         type: "font-face",
@@ -443,7 +442,6 @@ async function generateCSSFiles(output: Output) {
       });
     }
 
-    // @ts-expect-error
     for (const fontFace of output.scripts[script].body.fontFaces) {
       rules.push({
         type: "font-face",

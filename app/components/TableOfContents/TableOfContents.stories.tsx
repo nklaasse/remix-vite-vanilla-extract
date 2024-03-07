@@ -1,8 +1,10 @@
-import type { modifyForTypography } from "~/utils/richTextForTypography";
+import type {
+  modifyForTypography,
+  HeadingNode,
+} from "~/utils/richTextForTypography";
 import {
   generateForTypography,
   getHeadingsFromContent,
-  type HeadingNode,
 } from "~/utils/richTextForTypography";
 import { useContentObserver } from "~/hooks/useContentObserver";
 
@@ -328,13 +330,13 @@ export const Default: StoryFn<typeof TableOfContents> = () => {
   }, [setHashId, headings]);
 
   const selectedKeys = React.useMemo(() => {
-    for (let heading of headings) {
+    for (const heading of headings) {
       if (heading.id === hashId) {
         return [heading.id];
       }
 
       if (heading.children) {
-        for (let subHeading of heading.children) {
+        for (const subHeading of heading.children) {
           if (subHeading.id === hashId) {
             return [heading.id, subHeading.id];
           }

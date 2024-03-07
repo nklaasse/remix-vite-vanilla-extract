@@ -7,10 +7,9 @@ import {
 import * as React from "react";
 import { treeNode, treeBranch, toggle } from "./TableOfContentsMenu.css";
 import classnames from "classnames";
-import type { AriaToggleButtonProps } from "react-aria";
+import type { AriaToggleButtonProps, AriaMenuOptions } from "react-aria";
 import {
   useMenu,
-  type AriaMenuOptions,
   useMenuItem,
   mergeProps,
   useKeyboard,

@@ -6,8 +6,7 @@ import type {
   DatePickerAria,
   DateValue,
 } from "react-aria";
-import { useDatePicker } from "react-aria";
-import { useLocale } from "react-aria";
+import { useDatePicker, useLocale } from "react-aria";
 import { useDatePickerState } from "react-stately";
 import { DatePickerContextualHelp } from "./DatePickerContextualHelp";
 import { DatePickerErrorMessage } from "./DatePickerErrorMessage";

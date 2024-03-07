@@ -103,7 +103,7 @@ export type PeriodPickerDateBaseProps<T extends DateValue = DateValue> = Omit<
 export const PeriodPickerDateBase = React.forwardRef(
   function PeriodPickerDateBase(
     props: PeriodPickerDateBaseProps<DateValue>,
-    ref: React.ForwardedRef<HTMLDivElement>
+    _ref: React.ForwardedRef<HTMLDivElement>
   ) {
     const { children } = props;
 

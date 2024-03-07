@@ -1,4 +1,3 @@
-import * as React from "react";
 import type { FieldContextualHelpProps } from "../Field";
 import { Field } from "../Field";
 

@@ -3,7 +3,6 @@ import { Fieldset } from "~/components/Fieldset";
 import { TextField } from "~/components/TextField";
 import { IconDelete } from "~/icons/IconDelete";
 import type { Meta, StoryFn } from "@storybook/react";
-import * as React from "react";
 
 export default {
   title: "Components/Fieldset",

@@ -1,4 +1,3 @@
-import * as React from "react";
 import type { ContextualHelpProps } from "../ContextualHelp";
 import { ContextualHelp } from "../ContextualHelp";
 import { fieldContextualHelp } from "./FieldContextualHelp.css";

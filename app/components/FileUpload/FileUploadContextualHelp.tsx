@@ -1,6 +1,5 @@
 import type { FieldContextualHelpProps } from "~/components/Field";
 import { Field } from "~/components/Field";
-import * as React from "react";
 
 type FileUploadContextualHelpProps = FieldContextualHelpProps;
 

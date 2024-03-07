@@ -95,16 +95,16 @@ export const test = viTest.extend<{
   screen: typeof screen;
   user: UserEvent;
 }>({
-  async render({ task }, use) {
+  async render({ task: _task }, use) {
     await use(render);
   },
-  async renderHook({ task }, use) {
+  async renderHook({ task: _task }, use) {
     await use(renderHook);
   },
-  async screen({ task }, use) {
+  async screen({ task: _task }, use) {
     await use(screen);
   },
-  async user({ task }, use) {
+  async user({ task: _task }, use) {
     const user = userEvent.setup();
     await use(user);
   },

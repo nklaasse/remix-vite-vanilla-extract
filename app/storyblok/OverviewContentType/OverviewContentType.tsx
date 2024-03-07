@@ -12,12 +12,6 @@ import {
 import type { ComponentProps as PageIntroComponentProps } from "~/storyblok/PageIntroContentType";
 
 import {
-  Component as ContactInfoContentTypeComponent,
-  loader as contactInfoLoader,
-} from "~/storyblok/ContactInfoContentType";
-import type { ComponentProps as ContactInfoContentTypeComponentProps } from "~/storyblok/ContactInfoContentType";
-
-import {
   Component as ContactCompanyDetailsContentTypeComponent,
   loader as contactCompanyDetailsLoader,
 } from "~/storyblok/ContactCompanyDetailsContentType";

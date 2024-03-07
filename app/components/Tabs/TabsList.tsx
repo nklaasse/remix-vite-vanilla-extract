@@ -14,12 +14,10 @@ import type {
   TabListProps as ReactAriaTabListProps,
 } from "react-aria-components";
 import {
-  TabList as ReactAriaTabList,
-  TabListStateContext,
-} from "react-aria-components";
-import {
   Button as ReactAriaButton,
   MenuTrigger as ReactAriaMenuTrigger,
+  TabList as ReactAriaTabList,
+  TabListStateContext,
 } from "react-aria-components";
 import { tabPicker, tabsList } from "./TabsList.css";
 import { tabsTab } from "./TabsTab.css";

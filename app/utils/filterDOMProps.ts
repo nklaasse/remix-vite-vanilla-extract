@@ -23,7 +23,7 @@ export function filterDOMProps(props: HTMLAttributes<HTMLElement>): DOMProps {
 
   for (const prop in props) {
     if (whitelist.has(prop) || dataPropsRe.test(prop)) {
-      // @ts-ignore: There is no good type for React data attributes
+      // @ts-expect-error: There is no good type for React data attributes
       filteredProps[prop] = props[prop];
     }
   }

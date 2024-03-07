@@ -77,7 +77,9 @@ export function FileUploadInput() {
       // in this case if we wan't need to support it we can't sync it with the HTML input
       try {
         dataTransfer = new DataTransfer();
-      } catch (error) {}
+      } catch (error) {
+        console.error(error);
+      }
 
       if (dataTransfer) {
         if (files) {

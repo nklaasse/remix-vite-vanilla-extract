@@ -11,7 +11,6 @@ import { FlagPE } from "~/icons/FlagPE";
 import { FlagUK } from "~/icons/FlagUK";
 import { FlagUS } from "~/icons/FlagUS";
 import type { Meta, StoryFn } from "@storybook/react";
-import React from "react";
 import { Picker } from ".";
 
 export default {

@@ -11,7 +11,7 @@ export default {
   component: Navigation,
 } as Meta<typeof Navigation>;
 
-export const Bar: StoryFn<typeof Navigation> = (props) => {
+export const Bar: StoryFn<typeof Navigation> = () => {
   return (
     <Navigation>
       <Navigation.Bar>
@@ -43,7 +43,7 @@ export const Bar: StoryFn<typeof Navigation> = (props) => {
   );
 };
 
-export const Rail: StoryFn<typeof Navigation> = (props) => {
+export const Rail: StoryFn<typeof Navigation> = () => {
   return (
     <Navigation>
       <Navigation.Rail>

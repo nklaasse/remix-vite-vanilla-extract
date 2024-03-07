@@ -199,6 +199,7 @@ export function ActionGroup<T extends object>(props: ActionGroupProps<T>) {
     >
       <ElementTypeProvider type={label === "show" ? "button" : "tooltip"}>
         <div
+          role="presentation"
           className={classnames(
             actionGroup.container,
             actionGroup.variants.align[align],

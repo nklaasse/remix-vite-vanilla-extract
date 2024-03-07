@@ -1,6 +1,5 @@
 import { Stack } from "~/components/Stack";
 import type { Meta, StoryFn } from "@storybook/react";
-import * as React from "react";
 import { useOverlayTriggerState } from "react-stately";
 
 export default {

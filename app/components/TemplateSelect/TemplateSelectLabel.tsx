@@ -1,8 +1,7 @@
 import * as React from "react";
 import type { FieldLabelProps } from "../Field";
 import { Field } from "../Field";
-import { useElementType } from "./TemplateSelect";
-import { TemplateSelectContext } from "./TemplateSelect";
+import { TemplateSelectContext, useElementType } from "./TemplateSelect";
 import { templateSelectPreviewLabel } from "./TemplateSelectLabel.css";
 
 export type TemplateSelectPreviewLabelProps = {

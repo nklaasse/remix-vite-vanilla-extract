@@ -1,7 +1,6 @@
 import { Tooltip } from "~/components/Tooltip";
 import { IconOrderedList } from "~/icons/IconOrderedList";
 import { useIntl } from "react-intl";
-import React from "react";
 import { TextEditorList } from "./_TextEditorList";
 
 export function TextEditorOrderedList() {

@@ -189,8 +189,8 @@ type SliderProps<T> = Omit<AriaTabListProps<T>, "onSelectionChange"> & {
 };
 
 function Slider<T extends object>(props: SliderProps<T>) {
-  let tabListRef = React.useRef<HTMLDivElement>(null);
-  let { rootRef } = props;
+  const tabListRef = React.useRef<HTMLDivElement>(null);
+  const { rootRef } = props;
 
   const intl = useIntl();
 

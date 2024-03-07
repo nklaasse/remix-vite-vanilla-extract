@@ -1,6 +1,5 @@
 import { createElementTypeContext } from "~/components/ElementType";
 import { Field } from "~/components/Field";
-import * as React from "react";
 import type { TagGroupProps as ReactAriaTagGroupProps } from "react-aria-components";
 import {
   InputContext,

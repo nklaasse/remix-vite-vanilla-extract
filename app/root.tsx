@@ -1,6 +1,5 @@
 import type { LinksFunction, LoaderFunction } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare";
-import { RouterProvider as ReactAriaRouterProvider } from "react-aria";
 
 import { cssBundleHref } from "@remix-run/css-bundle";
 import "~/fonts/Arab.css";
@@ -24,11 +23,15 @@ import {
   useNavigate,
 } from "@remix-run/react";
 
-import { I18nProvider, useLocale } from "react-aria";
+import {
+  I18nProvider,
+  useLocale,
+  RouterProvider as ReactAriaRouterProvider,
+} from "react-aria";
 import { getLocale } from "./config";
-import classNames from "classnames";
 import { IntlProvider } from "react-intl";
 import { ToastProvider } from "./components/Toast";
+import classNames from "classnames";
 
 export const links: LinksFunction = () => {
   return [
@@ -121,10 +124,11 @@ function Root() {
 
 export function ErrorBoundary() {
   const error = useRouteError();
+  const { direction, locale } = useLocale();
 
   if (isRouteErrorResponse(error)) {
     return (
-      <html>
+      <html lang={locale} dir={direction}>
         <head>
           <title>Oops!</title>
           <Meta />
@@ -140,7 +144,7 @@ export function ErrorBoundary() {
     );
   } else if (error instanceof Error) {
     return (
-      <html>
+      <html lang={locale} dir={direction}>
         <head>
           <title>Oops!</title>
           <Meta />
@@ -155,7 +159,7 @@ export function ErrorBoundary() {
     );
   } else {
     return (
-      <html>
+      <html lang={locale} dir={direction}>
         <head>
           <title>Oops!</title>
           <Meta />
