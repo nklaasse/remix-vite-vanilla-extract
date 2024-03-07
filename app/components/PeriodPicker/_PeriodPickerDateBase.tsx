@@ -149,7 +149,7 @@ export const PeriodPickerDateBase = React.forwardRef(
       ...otherProps,
       maxValue,
       minValue,
-      // @ts-ignore
+      // @ts-expect-error: Granularity is not in the DatePickerAria type
       granularity,
     });
 
@@ -167,7 +167,7 @@ export const PeriodPickerDateBase = React.forwardRef(
 
         label,
         errorMessage,
-        // @ts-ignore
+        // @ts-expect-error: Granularity is not in the DatePickerAria type
         granularity,
       },
       datePickerState,
