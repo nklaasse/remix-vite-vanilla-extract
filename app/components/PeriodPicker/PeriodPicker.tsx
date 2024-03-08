@@ -52,7 +52,7 @@ export function PeriodPicker(props: PeriodPickerProps) {
     ...props,
     maxValue,
     minValue,
-    // @ts-ignore
+    // @ts-expect-error: React stately accepts null values but is typed incorrectly
     granularity: "month",
   });
   const ref = React.useRef<HTMLDivElement>(null);
@@ -62,7 +62,7 @@ export function PeriodPicker(props: PeriodPickerProps) {
         ...props,
         minValue,
         maxValue,
-        // @ts-ignore
+        // @ts-expect-error: React aria accepts null values but is typed incorrectly
         granularity: "month",
       },
       state,

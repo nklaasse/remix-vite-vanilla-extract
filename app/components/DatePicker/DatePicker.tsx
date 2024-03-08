@@ -124,7 +124,7 @@ const _DatePicker = React.forwardRef<HTMLDivElement, DatePickerProps>(
       value: value as DateValue,
       minValue,
       maxValue,
-      // @ts-ignore
+      // @ts-expect-error: React stately accepts null values but is typed incorrectly
       granularity,
     });
 
@@ -145,7 +145,7 @@ const _DatePicker = React.forwardRef<HTMLDivElement, DatePickerProps>(
         value: value as DateValue,
         minValue,
         maxValue,
-        // @ts-ignore
+        // @ts-expect-error: React aria accepts null values but is typed incorrectly
         granularity,
       },
       datePickerState,

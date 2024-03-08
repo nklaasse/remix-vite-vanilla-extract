@@ -27,7 +27,6 @@ const scrollViewContainer = style({
   overflowY: "auto",
   overflowX: "hidden",
 
-  // @ts-ignore
   selectors: {
     "&:after": {
       content: "''",
