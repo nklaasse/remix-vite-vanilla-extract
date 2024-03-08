@@ -1,4 +1,4 @@
-name: Site Next
+name: Pull Request Opened
 on:
   pull_request:
     branches: [main]
@@ -6,9 +6,9 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repo
+      - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Install NodeJS
+      - name: Install NodeJS 18
         uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -16,8 +16,8 @@ jobs:
         run: npm ci
       - name: Code Linting
         run: npm run lint
-      - name: Run Type Check
+      - name: Type Checks
         run: npm run typecheck
-      - name: Run Unit tests
+      - name: Unit tests
         run: npm run coverage
       - run: echo "🍏 This job's status is ${{ job.status }}."
