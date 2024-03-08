@@ -34,9 +34,9 @@ export function Component(props: ComponentProps) {
         </div>
         <div className={blogHeader.illustrationContainer}>
           <img
-            className={blogHeader.illustration}
-            src={data.illustration.filename}
             alt=""
+            src={data.illustration.filename}
+            className={blogHeader.illustration}
           />
         </div>
       </div>
