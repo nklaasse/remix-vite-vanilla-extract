@@ -1,0 +1,19 @@
+name: Pull Request Closed
+concurrency:
+  group: pr_${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+on:
+  pull_request:
+    types:
+      - closed
+      - merged
+jobs:
+  - name: Delete Cloudflare Preview Deployment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: go-fjords/cloudflare-delete-deployments-action@main
+        with:
+          token: ${{ secrets.CLOUDFLARE_TOKEN }}
+          project: remix-vite-vanilla-extract
+          account: e58133e213da7714a93f329c1a055ac7
+          branch: ${{ github.head_ref }}
